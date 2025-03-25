@@ -9,7 +9,7 @@ function Cart() {
       {
         toggle && (
           <div>
-            <div >
+            <div>
               <div className='flex align justify-between items-center gap-5 m-5 p-3 border-gray-200 max-[476]:align-center max-sm:grid max-sm:top-0 max-sm:absolute max-sm:text-white max-sm:m-0 max-sm:bg-gray-500 max-sm:w-full max-sm:text-center max-sm:fixed'>
                 <div>
                   <p className='flex items-center gap-2'>
@@ -42,28 +42,28 @@ function Cart() {
       <div className='border-1 border-gray-200 m-5'>
         <div className='m-5'>
           <div className="grid grid-cols-4 gap-5 mt-10 sm:grid max-sm:grid-cols-1 max-sm:m-10 max-sm:w-90">
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/Airpods.png" alt="" />
               <p className="text-center">Apple Air Pods 2</p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/smartwatch.png" alt="" />
               <p className="text-center">Samsung Smart Watch</p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/tv.png" alt="" />
               <p className="text-center">Apple Monitor Pro</p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/watch.png" alt="" />
               <p className="text-center">Apple Watch Series 4</p>
@@ -73,28 +73,28 @@ function Cart() {
         </div>
         <div className='m-5'>
           <div className="grid grid-cols-4 gap-5 mt-10 sm:grid max-sm:grid-cols-1 max-sm:grid-cols-1 max-sm:m-10 max-sm:w-90">
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/Mobile.png" alt="" />
               <p className="text-center">Google Pixel 4 XL</p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/spaker.png" alt="" />
               <p className="text-center">Amazon Smart Speaker</p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/mackbook.png" alt="" />
               <p className="text-center">Apple MacBook Pro 16</p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/ipad.png" alt="" />
               <p className="text-center">Apple iPad 10.2</p>
@@ -104,28 +104,28 @@ function Cart() {
         </div>
         <div className='m-5'>
           <div className="grid grid-cols-4 gap-5 mt-10 sm:grid max-sm:grid-cols-1 max-sm:grid-cols-1 max-sm:m-10 max-sm:w-90">
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/laptop.png" alt="" />
               <p className="text-center">Microsoft Surface Book</p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/nest.png" alt="" />
               <p className="text-center">Google Nest</p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/imac.png" alt="" />
               <p className="text-center">Apple iMac Pro </p>
               <p className='text-center mt-3'>$600</p>
             </div>
 
-            <div className="border-1 border-gray-200 shadow-xl p-5">
+            <div className="border-1 border-gray-300 shadow-xl p-5">
               <input type="checkbox" />
               <img src="/images/ssmartwatch.png" alt="" />
               <p className="text-center">Samsung Smart Watch</p>
