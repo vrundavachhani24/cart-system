@@ -79,6 +79,16 @@ const Cart = [
 const Product = () => {
 
     const [selectItems, setSelectItems] = useState([])
+    const [searchdata, setSearchData] = useState("");
+
+    const handleSearch = (term) => {
+        setSearchData(term.toLowerCase());
+      };
+    
+      const filteredProducts = Cart.filter((item) =>
+        item.name.toLowerCase().includes(searchdata)
+      );
+
 
     const handleSelectAll = () => {
         if (selectItems.length === Cart.length) {
@@ -101,16 +111,17 @@ const Product = () => {
             <Header Cart={Cart}
                 handleSelectAll={handleSelectAll}
                 selectItems={selectItems}
+                handleSearch={handleSearch}
             />
             <div className="container mx-auto text-center">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
                     {
-                        Cart.map((item) => (
+                        filteredProducts.map((item) => (
                             <div key={item.id} className="bg-white p-4 shadow-lg border-1 border-gray-300">
                                 <input type="checkbox" checked={selectItems.includes(item.id)}
-                                    onChange={() => handleSelectItem(item.id)} className="float-left" />
+                                    onChange={() => handleSelectItem(item.id)} className="float-left w-5 h-5 accent-blue-500" />
                                 <img src={item.image} className="mb-4" />
-                                <h3 className="text-lg">{item.name}</h3>
+                                <h3 className="text-lg font-bold">{item.name}</h3>
                                 <p>{item.price}</p>
                             </div>
                         ))
