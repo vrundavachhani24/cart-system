@@ -4,7 +4,6 @@ import Cart from './Component/Cart/cart'
 import Header from './Component/Header/Header'
 
 function App() {
-  const [toggle, settoggle] = useState(true)
 
   return (
     <div>
