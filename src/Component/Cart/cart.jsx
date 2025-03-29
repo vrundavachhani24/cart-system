@@ -78,18 +78,25 @@ const Cart = [
 
 const Product = () => {
 
+    const [updateCart, setUpdateCart] = useState(Cart);
     const [selectItems, setSelectItems] = useState([])
-    const [searchdata, setSearchData] = useState("");
+    const [searchdata, setSearchData] = useState('')
 
-    const handleSearch = (term) => {
-        setSearchData(term.toLowerCase());
+    const handledelete = () => {
+        const updatedCart = updateCart.filter((item) => !selectItems.includes(item.id))
+        setUpdateCart(updatedCart); 
+        setSelectItems([]); 
       };
-    
-      const filteredProducts = Cart.filter((item) =>
+      
+
+    const handleSearch = (search) => {
+        setSearchData(search.toLowerCase())
+    }
+
+    const filteredProducts = updateCart.filter((item) => 
         item.name.toLowerCase().includes(searchdata)
-      );
-
-
+    )
+ 
     const handleSelectAll = () => {
         if (selectItems.length === Cart.length) {
             setSelectItems([]); 
@@ -108,11 +115,12 @@ const Product = () => {
 
     return (
         <div>
-            <Header Cart={Cart}
+            <Header Cart={updateCart}
                 handleSelectAll={handleSelectAll}
                 selectItems={selectItems}
                 handleSearch={handleSearch}
-            />
+                handledelete={handledelete}
+/>
             <div className="container mx-auto text-center">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
                     {
