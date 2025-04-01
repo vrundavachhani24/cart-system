@@ -9,7 +9,7 @@ const Header = ({Cart , handleSelectAll , selectItems , handleSearch , handledel
                     <div className='flex align justify-between items-center gap-5 m-5 p-3 border-gray-200 max-[476]:align-center max-sm:grid max-sm:top-0 max-sm:absolute max-sm:text-white max-sm:m-0 max-sm:bg-gray-500 max-sm:w-full max-sm:text-center max-sm:fixed'>
                         <div>
                             <p className='flex items-center gap-2'>
-                                <input type="checkbox" className="w-5 h-5 accent-blue-800" onChange={handleSelectAll}
+                                <input type="checkbox" className="w-5 h-5 accent-blue-500" onChange={handleSelectAll}
                                     checked={selectItems.length === Cart.length && Cart.length !== 0} />
                                 Select All</p>
                         </div>

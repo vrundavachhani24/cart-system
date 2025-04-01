@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 
 const Cart = [
@@ -78,16 +78,19 @@ const Cart = [
 
 const Product = () => {
 
-    const [updateCart, setUpdateCart] = useState(Cart);
+    const [updateCart, setUpdateCart] = useState(Cart)
     const [selectItems, setSelectItems] = useState([])
     const [searchdata, setSearchData] = useState('')
 
+    // useEffect(() => {
+    //     localStorage.setItem('cart' , JSON.stringify(updateCart))
+    // } , [updateCart])
+
     const handledelete = () => {
         const updatedCart = updateCart.filter((item) => !selectItems.includes(item.id))
-        setUpdateCart(updatedCart); 
-        setSelectItems([]); 
-      };
-      
+        setUpdateCart(updatedCart)
+        setSelectItems([])
+    }
 
     const handleSearch = (search) => {
         setSearchData(search.toLowerCase())
@@ -103,6 +106,7 @@ const Product = () => {
         } else {
             setSelectItems(Cart.map((item) => item.id))
         }
+        localdata()
     }
 
     const handleSelectItem = (id) => {
@@ -111,6 +115,7 @@ const Product = () => {
         } else {
             setSelectItems([...selectItems , id])
         }
+        localdata()
     }
 
     return (
@@ -120,7 +125,7 @@ const Product = () => {
                 selectItems={selectItems}
                 handleSearch={handleSearch}
                 handledelete={handledelete}
-/>
+            />
             <div className="container mx-auto text-center">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
                     {
@@ -137,7 +142,7 @@ const Product = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default Product
