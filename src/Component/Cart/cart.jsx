@@ -130,7 +130,7 @@ const Product = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-5">
                     {
                         filteredProducts.map((item) => (
-                            <div key={item.id} className="bg-white p-4 shadow-lg border-1 border-gray-300">
+                            <div key={item.id} className="bg-white p-4 shadow-lg shadow-black border-1 border-gray-300">
                                 <input type="checkbox" checked={selectItems.includes(item.id)}
                                     onChange={() => handleSelectItem(item.id)} className="float-left w-5 h-5 accent-blue-500" />
                                 <img src={item.image} className="mb-4" />
